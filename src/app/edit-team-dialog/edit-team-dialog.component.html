@@ -1,0 +1,24 @@
+<h2 mat-dialog-title>Create a Team</h2>
+<mat-dialog-content>
+  <form>
+    <mat-form-field>
+      <mat-label>Naziv</mat-label>
+      <input matInput [(ngModel)]="data.nazivTim" name="ImeTima">
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Tip</mat-label>
+      <input matInput [(ngModel)]="data.tipTima" name="TipTima">
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Datum formiranja</mat-label>
+      <input matInput [(ngModel)]="data.datumFormiranjaTim" name="TipProjekta">
+    </mat-form-field>
+
+    
+    
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button (click)="updateTeam()">Update</button>
+  <button mat-button (click)="onNoClick()">Cancel</button>
+</mat-dialog-actions>

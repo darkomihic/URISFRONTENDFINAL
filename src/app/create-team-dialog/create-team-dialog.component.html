@@ -1,0 +1,17 @@
+<h2 mat-dialog-title>Create a Tim</h2>
+<mat-dialog-content>
+  <form>
+    <mat-form-field>
+      <mat-label>Tim Name</mat-label>
+      <input matInput [(ngModel)]="data.nazivTim" name="timName">
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Tip tima</mat-label>
+      <input matInput [(ngModel)]="data.tipTima" name="timTip">
+    </mat-form-field>
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button (click)="createTim()">Create</button>
+  <button mat-button (click)="onNoClick()">Cancel</button>
+</mat-dialog-actions>

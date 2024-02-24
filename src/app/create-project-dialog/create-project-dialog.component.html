@@ -1,0 +1,29 @@
+<h2 mat-dialog-title>Create a Project</h2>
+<mat-dialog-content>
+  <form>
+    <mat-form-field>
+      <mat-label>Project Name</mat-label>
+      <input matInput [(ngModel)]="data.nazivProjekta" name="projectName">
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Description</mat-label>
+      <input matInput [(ngModel)]="data.opisProjekta" name="projectDescription">
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Type</mat-label>
+      <input matInput [(ngModel)]="data.tipProjekta" name="projectType">
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Team</mat-label>
+      <mat-select [(value)]="data.id_tim" name="teamSelect">
+        <mat-option *ngFor="let team of teams" [value]="team.id_tim" name="teamMenu">
+          {{team.nazivTim}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button (click)="createProject()">Create</button>
+  <button mat-button (click)="onNoClick()">Cancel</button>
+</mat-dialog-actions>

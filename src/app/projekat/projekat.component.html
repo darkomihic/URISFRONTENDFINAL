@@ -1,0 +1,48 @@
+<div class="main-content">
+  <div class="container-fluid">
+      <div class="row">
+          <div class="col-md-12">
+              <div class="card">
+                  <div class="card-header card-header-danger">
+                      <h4 class="card-title ">Simple Table</h4>
+                      <p class="card-category"> Here is a subtitle for this table</p>
+                  </div>
+                  <div class="card-body">
+                      <div class="table-responsive">
+                          <table class="table">
+                              <thead class=" text-primary">
+                                  <th>
+                                      Ime
+                                  </th>
+                                  <th>
+                                      Opis
+                                  </th>
+                                  <th>
+                                      Tim
+                                  </th>
+                                  <th>
+                                    Tip
+                                </th>
+                              </thead>
+                              <tbody>
+                                <tr *ngFor="let project of projects">
+                                  <td>{{project.nazivProjekta}}</td>
+                                  <td>{{project.opisProjekta}}</td>
+                                  <td>{{getTeamName(project.id_tim)}}</td>
+                                  <td>{{project.tipProjekta}}</td>
+                                  <td>
+                                    <button (click)="editProject(project)">Edit</button>
+                                    <button (click)="deleteProject(project)">Delete</button>
+                                    <button (click)="viewProjectIterations(project)">Iteracije</button>
+                                  </td>
+                                </tr>
+                              </tbody>
+                          </table>
+                          <button (click)="startCreateProjectDialog()">Add Project</button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>

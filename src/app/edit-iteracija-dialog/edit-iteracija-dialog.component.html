@@ -1,0 +1,21 @@
+<h2 mat-dialog-title>Create a Iteracija</h2>
+<mat-dialog-content>
+  <form>
+    <mat-form-field>
+      <mat-label>Verzija projekta</mat-label>
+      <input matInput [(ngModel)]="data.verzijaProjekta" name="ImeTima">
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Tip</mat-label>
+      <input matInput [(ngModel)]="data.tipIteracije" name="TipTima">
+    </mat-form-field>
+
+
+    
+    
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button (click)="updateIteracija()">Update</button>
+  <button mat-button (click)="onNoClick()">Cancel</button>
+</mat-dialog-actions>

@@ -1,0 +1,43 @@
+<div class="main-content">
+  <div class="container-fluid">
+      <div class="row">
+          <div class="col-md-12">
+              <div class="card">
+                  <div class="card-header card-header-danger">
+                      <h4 class="card-title ">Simple Table</h4>
+                      <p class="card-category"> Here is a subtitle for this table</p>
+                  </div>
+                  <div class="card-body">
+                      <div class="table-responsive">
+                          <table class="table">
+                              <thead class=" text-primary">
+                                  <th>
+                                      Naziv
+                                  </th>
+                                  <th>
+                                      Tip
+                                  </th>
+                                  <th>
+                                      Datum formiranja
+                                  </th>
+                              </thead>
+                              <tbody>
+                                <tr *ngFor="let tim of tims">
+                                  <td>{{tim.nazivTim}}</td>
+                                  <td>{{tim.tipTima}}</td>
+                                  <td>{{tim.datumFormiranjaTima}}</td>
+                                  <td>
+                                    <button (click)="editTim(tim)">Edit</button>
+                                    <button (click)="deleteTim(tim)">Delete</button>
+                                  </td>
+                                </tr>
+                              </tbody>
+                          </table>
+                          <button (click)="startCreateTimDialog()">Add Tim</button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
